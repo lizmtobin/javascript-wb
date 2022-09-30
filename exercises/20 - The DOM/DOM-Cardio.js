@@ -82,6 +82,16 @@ div.insertAdjacentElement("beforebegin", cards);
 // put the div into the DOM just before the wrapper element
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
+const deleteButtons = document.querySelectorAll(".delete");
+
+console.log(deleteButtons);
 // select all the buttons!
 // make out delete function
+function deleteCard(event) {
+  const buttonThatGotClicked = event.currentTarget;
+  // buttonThatGotClicked.parentElement.remove();
+  buttonThatGotClicked.closest(".playerCard").remove();
+}
+
 // loop over them and attach a listener
+deleteButtons.forEach((button) => button.addEventListener("click", deleteCard));
