@@ -15,6 +15,7 @@ const ob = new IntersectionObserver(obCallback, {
   threshold: 1,
 });
 
-terms.addEventListener("scroll", function (e) {
-  console.log(e);
-});
+// terms.addEventListener("scroll", function (e) {
+//   console.log(e);
+// });
+ob.observe(terms.lastElementChild);
