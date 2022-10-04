@@ -16,3 +16,9 @@ function listenClick() {
 
 button.addEventListener("click", listenClick);
 button.removeEventListener("click", listenClick);
+
+const buyButtons = document.querySelectorAll("button.buy");
+
+buyButtons.forEach(function (buyButton) {
+  buyButton.addEventListener("click", listenClick);
+});
