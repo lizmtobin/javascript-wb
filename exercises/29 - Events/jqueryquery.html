@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>jQuery slideUp and slideDown</title>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#up-button").click(function () {
+          $("#box").slideUp();
+        });
+
+        $("#down-button").click(function () {
+          $("#box").slideDown();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div
+      id="box"
+      style="display: block; background: #ccc; width: 350px; height: 150px"
+    ></div>
+    <input type="button" value="Slide Up" id="up-button" />
+    <input type="button" value="Slide Down" id="down-button" />
+  </body>
+</html>
